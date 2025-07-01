@@ -20,8 +20,8 @@ const Footer: React.FC = () => {
 
   const programs = [
     { href: 'https://forms.gle/JuKwmSFCedhuguqw8', label: 'Nursery Admission' },
-    { href: 'https://forms.gle/JuKwmSFCedhuguqw8', label: 'Primary Classes' },
-    { href: 'https://forms.gle/JuKwmSFCedhuguqw8', label: 'Upper Primary Classes' },
+    { href: 'https://forms.gle/JuKwmSFCedhuguqw8', label: 'Primary Classes Admission' },
+    { href: 'https://forms.gle/JuKwmSFCedhuguqw8', label: 'Upper Primary Classes Admission' },
   ];
 
   return (
