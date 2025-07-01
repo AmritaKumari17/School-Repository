@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap } from 'lucide-react';
 
 const Header: React.FC = () => {
   return (
@@ -18,7 +17,12 @@ const Header: React.FC = () => {
             transition={{ delay: 0.3, type: "spring", stiffness: 260, damping: 20 }}
             className="flex items-center mb-4 lg:mb-0"
           >
-            <GraduationCap className="h-20 w-20 text-orange-600 mr-4" />
+            <img 
+  src="/img/logo.png" 
+  alt="Graduation" 
+  className="h-40 w-40 mr-4 object-contain" 
+/>
+
           </motion.div>
           
           <motion.div 
