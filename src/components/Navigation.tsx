@@ -37,7 +37,6 @@ const Navigation: React.FC = () => {
             className="text-xl font-bold text-orange-600"
             whileHover={{ scale: 1.05 }}
           >
-            GJPS
           </motion.div>
 
           {/* Desktop Menu */}
