@@ -4,7 +4,7 @@ import { Calendar } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <section id="home" className="relative min-h-[500px] flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-[400px] sm:min-h-[500px] md:min-h-[600px] flex items-center justify-center overflow-hidden">
       {/* Background with parallax effect */}
       <motion.div 
         initial={{ scale: 1.1 }}
@@ -32,16 +32,16 @@ const Hero: React.FC = () => {
       </motion.div>
 
       {/* Content */}
-      <div className="relative z-10 text-center text-white px-4">
+      <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
         <motion.h1 
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.8 }}
-          className="text-4xl lg:text-6xl font-bold mb-6"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 md:mb-6 leading-tight"
         >
           Welcome to{' '}
           <motion.span 
-            className="text-yellow-300"
+            className="text-yellow-300 block sm:inline mt-2 sm:mt-0"
             animate={{ 
               textShadow: [
                 '0 0 20px rgba(255, 255, 0, 0.5)',
@@ -59,7 +59,7 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.8 }}
-          className="text-xl lg:text-2xl mb-8 font-light"
+          className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 font-light leading-relaxed px-4"
         >
           Nurturing young minds to build a brighter future
         </motion.p>
@@ -73,15 +73,15 @@ const Hero: React.FC = () => {
             href="#contact"
             whileHover={{ scale: 1.05, boxShadow: '0 10px 30px rgba(0,0,0,0.3)' }}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 shadow-lg"
+            className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold transition-all duration-300 shadow-lg"
           >
-            <Calendar className="mr-2 h-5 w-5" />
+            <Calendar className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
             Schedule a Visit
           </motion.a>
         </motion.div>
       </div>
 
-      {/* Floating elements */}
+      {/* Floating elements - hidden on mobile for better performance */}
       <motion.div
         animate={{ 
           y: [0, -20, 0],
@@ -92,7 +92,7 @@ const Hero: React.FC = () => {
           repeat: Infinity,
           ease: "easeInOut"
         }}
-        className="absolute top-20 left-10 w-16 h-16 bg-white/20 rounded-full"
+        className="absolute top-10 sm:top-20 left-4 sm:left-10 w-8 h-8 sm:w-16 sm:h-16 bg-white/20 rounded-full hidden sm:block"
       ></motion.div>
       
       <motion.div
@@ -106,7 +106,7 @@ const Hero: React.FC = () => {
           ease: "easeInOut",
           delay: 1
         }}
-        className="absolute bottom-20 right-10 w-12 h-12 bg-yellow-300/30 rounded-full"
+        className="absolute bottom-10 sm:bottom-20 right-4 sm:right-10 w-6 h-6 sm:w-12 sm:h-12 bg-yellow-300/30 rounded-full hidden sm:block"
       ></motion.div>
     </section>
   );

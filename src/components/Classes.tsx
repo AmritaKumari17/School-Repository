@@ -25,20 +25,20 @@ const Classes: React.FC = () => {
   ];
 
   return (
-    <section id="classes" className="py-20 bg-white">
+    <section id="classes" className="py-12 sm:py-16 md:py-20 bg-white">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-4">Our Classes</h2>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">Our Classes</h2>
           <div className="w-24 h-1 bg-orange-600 mx-auto"></div>
         </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {classes.map((classItem, index) => (
             <motion.div
               key={index}
@@ -46,27 +46,27 @@ const Classes: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
-              whileHover={{ y: -10, scale: 1.02 }}
+              whileHover={{ y: -5, scale: 1.02 }}
               className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300"
             >
-              <div className={`h-32 bg-gradient-to-r ${classItem.color} flex items-center justify-center`}>
+              <div className={`h-24 sm:h-32 bg-gradient-to-r ${classItem.color} flex items-center justify-center`}>
                 <motion.div
                   whileHover={{ scale: 1.2, rotate: 360 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <classItem.icon className="h-16 w-16 text-white" />
+                  <classItem.icon className="h-10 w-10 sm:h-12 sm:w-12 md:h-16 md:w-16 text-white" />
                 </motion.div>
               </div>
               
-              <div className="p-8">
+              <div className="p-6 md:p-8">
                 <motion.h4 
-                  className="text-2xl font-bold text-gray-800 mb-4"
-                  whileHover={{ scale: 1.05 }}
+                  className="text-xl sm:text-2xl font-bold text-gray-800 mb-3 md:mb-4"
+                  whileHover={{ scale: 1.02 }}
                 >
                   {classItem.title}
                 </motion.h4>
                 <motion.p 
-                  className="text-gray-600 leading-relaxed"
+                  className="text-gray-600 leading-relaxed text-sm sm:text-base"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ delay: 0.5 + index * 0.1 }}

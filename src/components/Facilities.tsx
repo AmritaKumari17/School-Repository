@@ -31,20 +31,20 @@ const Facilities: React.FC = () => {
   ];
 
   return (
-    <section id="facilities" className="py-20 bg-gray-50">
+    <section id="facilities" className="py-12 sm:py-16 md:py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-4">School Facilities</h2>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">School Facilities</h2>
           <div className="w-24 h-1 bg-orange-600 mx-auto"></div>
         </motion.div>
 
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {facilities.map((facility, index) => (
             <motion.div
               key={index}
@@ -52,10 +52,10 @@ const Facilities: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
               viewport={{ once: true }}
-              whileHover={{ y: -10 }}
+              whileHover={{ y: -5 }}
               className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300"
             >
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-40 sm:h-48 overflow-hidden">
                 <motion.img
                   src={facility.image}
                   alt={facility.title}
@@ -65,23 +65,23 @@ const Facilities: React.FC = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 <motion.div
-                  className="absolute top-4 left-4 bg-orange-600 p-3 rounded-full"
+                  className="absolute top-3 left-3 sm:top-4 sm:left-4 bg-orange-600 p-2 sm:p-3 rounded-full"
                   whileHover={{ scale: 1.2, rotate: 360 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <facility.icon className="h-6 w-6 text-white" />
+                  <facility.icon className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
                 </motion.div>
               </div>
               
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 <motion.h5 
-                  className="text-xl font-bold text-gray-800 mb-3"
-                  whileHover={{ scale: 1.05 }}
+                  className="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3"
+                  whileHover={{ scale: 1.02 }}
                 >
                   {facility.title}
                 </motion.h5>
                 <motion.p 
-                  className="text-gray-600"
+                  className="text-gray-600 text-sm sm:text-base"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ delay: 0.5 + index * 0.1 }}
